@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 app.get("/", (req, res) => {
   return res.json({ success: "OK" });
 });
